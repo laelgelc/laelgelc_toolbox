@@ -122,3 +122,7 @@ class PdfScraperApp(tk.Tk):
 def run_gui() -> None:
     app = PdfScraperApp()
     app.mainloop()
+
+
+if __name__ == "__main__":
+    run_gui()
