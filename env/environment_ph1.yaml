@@ -1,0 +1,12 @@
+# YAML
+name: laelgelc_toolbox
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13
+  - pip
+  - pip:
+      - pymupdf
+      - click
+      - pytest
+      - pyinstaller  # Optional but useful if you want Junie to help with builds
