@@ -8,7 +8,7 @@ from typing import List
 import tkinter as tk
 from tkinter import filedialog, messagebox, scrolledtext
 
-from .core import PdfToTextResult, pdfs_to_text
+from cl.pdf_scrape.core import PdfToTextResult, pdfs_to_text
 
 
 class PdfScraperApp(tk.Tk):

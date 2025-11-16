@@ -6,8 +6,8 @@ from pathlib import Path
 
 import click
 
-from .core import PdfToTextResult, pdfs_to_text
-from . import gui as gui_module
+from cl.pdf_scrape.core import PdfToTextResult, pdfs_to_text
+from cl.pdf_scrape import gui as gui_module
 
 
 @click.command(context_settings={"help_option_names": ["-h", "--help"]})
