@@ -5,6 +5,9 @@ PYTHON := python
 PYTEST := pytest
 PYINSTALLER := pyinstaller
 
+# Ensure the src/ layout package is importable when running via Make
+export PYTHONPATH := src
+
 # --- Helpers -------------------------------------------------------------
 
 .PHONY: help
