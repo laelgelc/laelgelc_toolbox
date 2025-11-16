@@ -11,7 +11,11 @@ from . import gui as gui_module
 
 
 @click.command(context_settings={"help_option_names": ["-h", "--help"]})
-@click.argument("input_path", type=click.Path(exists=True, path_type=Path))
+@click.argument(
+    "input_path",
+    type=click.Path(exists=True, path_type=Path),
+    required=False,
+)
 @click.option(
     "--output-dir",
     "-o",
@@ -32,7 +36,7 @@ from . import gui as gui_module
     help="Launch GUI instead of running in CLI mode.",
 )
 def main(
-        input_path: Path,
+        input_path: Path | None,
         output_dir: Path | None,
         overwrite: bool,
         gui: bool,
@@ -45,6 +49,12 @@ def main(
     if gui:
         gui_module.run_gui()
         return
+
+    if input_path is None:
+        raise click.UsageError(
+            "Missing argument 'INPUT_PATH'. "
+            "Provide a file or directory, or use --gui to launch the GUI."
+        )
 
     try:
         results = pdfs_to_text(
