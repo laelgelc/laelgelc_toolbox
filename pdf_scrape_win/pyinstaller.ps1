@@ -1,0 +1,1 @@
+pyinstaller --onefile --windowed -n pdf_scrape_gui --icon ..\assets\puppy_icon.ico ..\src\cl\pdf_scrape\gui.py

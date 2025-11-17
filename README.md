@@ -12,6 +12,7 @@ This project is organised as a multi-phase pipeline.
   - pdf_scrape/
 - config/
 - env/
+- assets/
 - tests/
   - pdf_scrape/
 
